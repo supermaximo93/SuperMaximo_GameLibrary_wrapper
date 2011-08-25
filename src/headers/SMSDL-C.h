@@ -1,12 +1,12 @@
 /*
- * SMSDL.h
+ * SMSDL-C.h
  *
  *  Created on: 25 Aug 2011
  *      Author: Max Foster
  */
 
-#ifndef SMSDL_H_
-#define SMSDL_H_
+#ifndef SMSDL_C_H_
+#define SMSDL_C_H_
 
 #ifdef __cplusplus
 extern "C" {
@@ -32,4 +32,4 @@ void wait(long time);
 }
 #endif
 
-#endif /* SMSDL_H_ */
+#endif /* SMSDL_C_H_ */
