@@ -12,6 +12,140 @@ using namespace std;
 
 extern "C" {
 
+mat2 * mat2New() {
+	return (mat2*)(new SuperMaximo::mat2);
+}
+
+void mat2Copy(mat2 * srcMatrix, mat2 * dstMatrix) {
+	*((SuperMaximo::mat2*)dstMatrix) = *((SuperMaximo::mat2*)srcMatrix);
+}
+
+float mat2Component(mat2 * matrix, int index) {
+	return ((SuperMaximo::mat2*)matrix)->component[index];
+}
+
+void mat2AssignComponent(mat2 * matrix, int index, float value) {
+	 ((SuperMaximo::mat2*)matrix)->component[index] = value;
+}
+
+void mat2MultiplyMat2(mat2 * matrix, mat2 * otherMatrix) {
+	*((SuperMaximo::mat2*)matrix) = (*((SuperMaximo::mat2*)matrix))*(*((SuperMaximo::mat2*)otherMatrix));
+}
+
+void mat2InitIdentity(mat2 * matrix, mat2 * otherMatrix) {
+	((SuperMaximo::mat2*)matrix)->initIdentity();
+}
+
+mat3 * mat3New() {
+	return (mat3*)(new SuperMaximo::mat3);
+}
+
+void mat3Copy(mat3 * srcMatrix, mat3 * dstMatrix) {
+	*((SuperMaximo::mat3*)dstMatrix) = *((SuperMaximo::mat3*)srcMatrix);
+}
+
+float mat3Component(mat3 * matrix, int index) {
+	return ((SuperMaximo::mat3*)matrix)->component[index];
+}
+
+void mat3AssignComponent(mat3 * matrix, int index, float value) {
+	 ((SuperMaximo::mat3*)matrix)->component[index] = value;
+}
+
+void mat3MultiplyMat3(mat3 * matrix, mat3 * otherMatrix) {
+	*((SuperMaximo::mat3*)matrix) = (*((SuperMaximo::mat3*)matrix))*(*((SuperMaximo::mat3*)otherMatrix));
+}
+
+void mat3InitIdentity(mat3 * matrix, mat3 * otherMatrix) {
+	((SuperMaximo::mat3*)matrix)->initIdentity();
+}
+
+mat4 * mat4New() {
+	return (mat4*)(new SuperMaximo::mat4);
+}
+
+void mat4Copy(mat4 * srcMatrix, mat4 * dstMatrix) {
+	*((SuperMaximo::mat4*)dstMatrix) = *((SuperMaximo::mat4*)srcMatrix);
+}
+
+float mat4Component(mat4 * matrix, int index) {
+	return ((SuperMaximo::mat4*)matrix)->component[index];
+}
+
+void mat4AssignComponent(mat4 * matrix, int index, float value) {
+	 ((SuperMaximo::mat4*)matrix)->component[index] = value;
+}
+
+void mat4MultiplyMat4(mat4 * matrix, mat4 * otherMatrix) {
+	*((SuperMaximo::mat4*)matrix) = (*((SuperMaximo::mat4*)matrix))*(*((SuperMaximo::mat4*)otherMatrix));
+}
+
+void mat4InitIdentity(mat4 * matrix, mat4 * otherMatrix) {
+	((SuperMaximo::mat4*)matrix)->initIdentity();
+}
+
+
+vec2 * vec2New() {
+	return (vec2*)(new SuperMaximo::vec2);
+}
+
+void vec2Copy(vec2 * srcVec, vec2 * dstVec) {
+	*((SuperMaximo::vec2*)dstVec) = *((SuperMaximo::vec2*)srcVec);
+}
+
+float vec2Component(vec2 * vec, char component) {
+	switch (component) {
+	case 'x':
+	case 'r':
+	case 's': return ((SuperMaximo::vec2*)vec)->x;
+	case 'y':
+	case 'g':
+	case 't': return ((SuperMaximo::vec2*)vec)->y;
+	default: return 0;
+	}
+}
+
+void vec2AssignComponent(vec2 * vec, char component, float value) {
+	switch (component) {
+	case 'x':
+	case 'r':
+	case 's': ((SuperMaximo::vec2*)vec)->x = value; break;
+	case 'y':
+	case 'g':
+	case 't': ((SuperMaximo::vec2*)vec)->y = value; break;
+	default: break;
+	}
+}
+
+void vec2MultiplyMat2(vec2 * vec, mat2 * matrix) {
+	*((SuperMaximo::vec2*)vec) *= (*((SuperMaximo::mat2*)matrix));
+}
+
+void vec2MultiplyFloat(vec2 * vec, float value) {
+	*((SuperMaximo::vec2*)vec) *= value;
+}
+
+void vec2DivideFloat(vec2 * vec, float value) {
+	*((SuperMaximo::vec2*)vec) /= value;
+}
+
+vec2 * vec2Perpendicular(vec2 * vec) {
+	SuperMaximo::vec2 * returnVec = new SuperMaximo::vec2;
+	*returnVec = ((SuperMaximo::vec2*)vec)->perpendicular();
+	return (vec2*)returnVec;
+}
+
+float vec2DotProduct(vec2 * vec, vec2 * otherVec) {
+	return ((SuperMaximo::vec2*)vec)->dotProduct(*((SuperMaximo::vec2*)otherVec));
+}
+
+int vec2PolygonCollision(vec2 * vec, unsigned vertexCount, vec2 ** vertices) {
+	SuperMaximo::vec2 vec2Arr[vertexCount];
+	for (unsigned i = 0; i < vertexCount; i++) vec2Arr[i] = *((SuperMaximo::vec2*)vertices[i]);
+	return ((SuperMaximo::vec2*)vec)->polygonCollision(vertexCount, vec2Arr);
+}
+
+
 int initDisplay(unsigned width, unsigned height, unsigned depth, unsigned maxFramerate, int fullScreen,
 		const char * windowTitle) {
 	return SuperMaximo::initDisplay(width, height, depth, maxFramerate, fullScreen, windowTitle);
