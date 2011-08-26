@@ -16,6 +16,11 @@ mat2 * mat2New() {
 	return (mat2*)(new SuperMaximo::mat2);
 }
 
+void mat2Delete(mat2 * matrix) {
+	delete (SuperMaximo::mat2*)matrix;
+	matrix = 0;
+}
+
 void mat2Copy(mat2 * srcMatrix, mat2 * dstMatrix) {
 	*((SuperMaximo::mat2*)dstMatrix) = *((SuperMaximo::mat2*)srcMatrix);
 }
@@ -39,6 +44,11 @@ void mat2InitIdentity(mat2 * matrix, mat2 * otherMatrix) {
 
 mat3 * mat3New() {
 	return (mat3*)(new SuperMaximo::mat3);
+}
+
+void mat3Delete(mat3 * matrix) {
+	delete (SuperMaximo::mat3*)matrix;
+	matrix = 0;
 }
 
 void mat3Copy(mat3 * srcMatrix, mat3 * dstMatrix) {
@@ -66,6 +76,11 @@ mat4 * mat4New() {
 	return (mat4*)(new SuperMaximo::mat4);
 }
 
+void mat4Delete(mat4 * matrix) {
+	delete (SuperMaximo::mat4*)matrix;
+	matrix = 0;
+}
+
 void mat4Copy(mat4 * srcMatrix, mat4 * dstMatrix) {
 	*((SuperMaximo::mat4*)dstMatrix) = *((SuperMaximo::mat4*)srcMatrix);
 }
@@ -89,6 +104,11 @@ void mat4InitIdentity(mat4 * matrix, mat4 * otherMatrix) {
 
 vec2 * vec2New() {
 	return (vec2*)(new SuperMaximo::vec2);
+}
+
+void vec2Delete(vec2 * vec) {
+	delete (SuperMaximo::vec2*)vec;
+	vec = 0;
 }
 
 void vec2Copy(vec2 * srcVec, vec2 * dstVec) {
@@ -160,6 +180,11 @@ vec3 * vec3New() {
 	return (vec3*)(new SuperMaximo::vec3);
 }
 
+void vec3Delete(vec3 * vec) {
+	delete (SuperMaximo::vec3*)vec;
+	vec = 0;
+}
+
 void vec3Copy(vec3 * srcVec, vec3 * dstVec) {
 	*((SuperMaximo::vec3*)dstVec) = *((SuperMaximo::vec3*)srcVec);
 }
@@ -217,6 +242,11 @@ float vec3DotProduct(vec3 * vec, vec3 * otherVec) {
 
 vec4 * vec4New() {
 	return (vec4*)(new SuperMaximo::vec4);
+}
+
+void vec4Delete(vec4 * vec) {
+	delete (SuperMaximo::vec4*)vec;
+	vec = 0;
 }
 
 void vec4Copy(vec4 * srcVec, vec4 * dstVec) {

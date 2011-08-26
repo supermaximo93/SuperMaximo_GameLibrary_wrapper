@@ -90,6 +90,7 @@ enum blendFuncEquEnum {
 
 
 mat2 * mat2New();
+void mat2Delete(mat2 * matrix);
 void mat2Copy(mat2 * srcMatrix, mat2 * dstMatrix);
 float mat2Component(mat2 * matrix, int index);
 void mat2AssignComponent(mat2 * matrix, int index, float value);
@@ -97,6 +98,7 @@ void mat2MultiplyMat2(mat2 * matrix, mat2 * otherMatrix);
 void mat2InitIdentity(mat2 * matrix, mat2 * otherMatrix);
 
 mat3 * mat3New();
+void mat3Delete(mat3 * matrix);
 void mat3Copy(mat3 * srcMatrix, mat3 * dstMatrix);
 float mat3Component(mat3 * matrix, int index);
 void mat3AssignComponent(mat3 * matrix, int index, float value);
@@ -104,6 +106,7 @@ void mat3MultiplyMat3(mat3 * matrix, mat3 * otherMatrix);
 void mat3InitIdentity(mat3 * matrix, mat3 * otherMatrix);
 
 mat4 * mat4New();
+void mat4Delete(mat4 * matrix);
 void mat4Copy(mat4 * srcMatrix, mat4 * dstMatrix);
 float mat4Component(mat4 * matrix, int index);
 void mat4AssignComponent(mat4 * matrix, int index, float value);
@@ -111,6 +114,7 @@ void mat4MultiplyMat4(mat4 * matrix, mat4 * otherMatrix);
 void mat4InitIdentity(mat4 * matrix, mat4 * otherMatrix);
 
 vec2 * vec2New();
+void vec2Delete(vec2 * vec);
 void vec2Copy(vec2 * srcVec, vec2 * dstVec);
 float vec2Component(vec2 * vec, char component);
 void vec2AssignComponent(vec2 * vec, char component, float value);
@@ -124,6 +128,7 @@ float vec2DotProduct(vec2 * vec, vec2 * otherVec);
 int vec2PolygonCollision(vec2 * vec, unsigned vertexCount, vec2 ** vertices);
 
 vec3 * vec3New();
+void vec3Delete(vec3 * vec);
 void vec3Copy(vec3 * srcVec, vec3 * dstVec);
 float vec3Component(vec3 * vec, char component);
 void vec3AssignComponent(vec3 * vec, char component, float value);
@@ -134,6 +139,7 @@ void vec3DivideFloat(vec3 * vec, float value);
 float vec3DotProduct(vec3 * vec, vec3 * otherVec);
 
 vec4 * vec4New();
+void vec4Delete(vec4 * vec);
 void vec4Copy(vec4 * srcVec, vec4 * dstVec);
 float vec4Component(vec4 * vec, char component);
 void vec4AssignComponent(vec4 * vec, char component, float value);
