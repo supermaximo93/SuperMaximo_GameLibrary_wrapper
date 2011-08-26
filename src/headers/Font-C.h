@@ -8,16 +8,10 @@
 #ifndef FONTC_H_
 #define FONTC_H_
 
+#include "Display-C.h"
+
 #ifdef __cplusplus
-
-class Font;
-class Shader;
 extern "C" {
-
-#else
-
-typedef struct Font Font;
-
 #endif
 
 Font * fontNew(const char * name, const char * fileName, unsigned newSize);

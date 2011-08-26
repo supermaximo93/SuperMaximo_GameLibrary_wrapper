@@ -15,6 +15,7 @@ class Sprite;
 class Model;
 class Object;
 class Texture;
+class Font;
 
 struct mat2;
 struct mat3;
@@ -32,6 +33,7 @@ typedef struct Sprite Sprite;
 typedef struct Model Model;
 typedef struct Object Object;
 typedef struct Texture Texture;
+typedef struct Font Font;
 
 typedef struct mat2 mat2;
 typedef struct mat3 mat3;
