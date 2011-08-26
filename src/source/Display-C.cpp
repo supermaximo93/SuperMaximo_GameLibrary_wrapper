@@ -510,4 +510,12 @@ int texture2dArrayDisabled() {
 	return SuperMaximo::texture2dArrayDisabled();
 }
 
+void disableTextureRectangle() {
+	SuperMaximo::disableTextureRectangle();
+}
+
+int textureRectangleDisabled() {
+	return SuperMaximo::textureRectangleDisabled();
+}
+
 }

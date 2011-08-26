@@ -223,6 +223,9 @@ int vertexArrayObjectSupported();
 void disableTexture2dArray();
 int texture2dArrayDisabled();
 
+void disableTextureRectangle();
+int textureRectangleDisabled();
+
 #ifdef __cplusplus
 }
 #endif
