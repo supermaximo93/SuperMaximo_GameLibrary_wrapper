@@ -14,6 +14,7 @@ class Shader;
 class Sprite;
 class Model;
 class Object;
+class Texture;
 
 struct mat2;
 struct mat3;
@@ -30,6 +31,7 @@ typedef struct Shader Shader;
 typedef struct Sprite Sprite;
 typedef struct Model Model;
 typedef struct Object Object;
+typedef struct Texture Texture;
 
 typedef struct mat2 mat2;
 typedef struct mat3 mat3;

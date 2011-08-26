@@ -11,13 +11,7 @@
 #include "Display-C.h"
 
 #ifdef __cplusplus
-
-class Object;
-class Model;
-class Sprite;
-class Shader;
 extern "C" {
-
 #endif
 
 Object * objectNewSprite(const char * newName, float destX, float destY, float destZ, Sprite * newSprite);

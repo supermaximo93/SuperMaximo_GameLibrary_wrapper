@@ -11,10 +11,7 @@
 #include "Display-C.h"
 
 #ifdef __cplusplus
-
-class Shader;
 extern "C" {
-
 #endif
 
 enum shaderAttributeEnum {

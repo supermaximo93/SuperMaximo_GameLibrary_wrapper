@@ -11,8 +11,6 @@
 #include "Display-C.h"
 
 #ifdef __cplusplus
-
-class Sprite;
 extern "C" {
 #endif
 

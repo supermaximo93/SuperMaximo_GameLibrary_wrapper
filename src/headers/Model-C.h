@@ -11,16 +11,7 @@
 #include "Display-C.h"
 
 #ifdef __cplusplus
-
-class Object;
-class Shader;
-class Model;
-
-struct bone;
-struct mat4;
-
 extern "C" {
-
 #endif
 
 enum bufferUsageEnum {
