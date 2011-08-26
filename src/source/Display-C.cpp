@@ -41,7 +41,7 @@ void mat2MultiplyMat2(mat2 * matrix, mat2 * otherMatrix) {
 	*((SuperMaximo::mat2*)matrix) = (*((SuperMaximo::mat2*)matrix))*(*((SuperMaximo::mat2*)otherMatrix));
 }
 
-void mat2InitIdentity(mat2 * matrix, mat2 * otherMatrix) {
+void mat2InitIdentity(mat2 * matrix) {
 	((SuperMaximo::mat2*)matrix)->initIdentity();
 }
 
@@ -75,7 +75,7 @@ void mat3MultiplyMat3(mat3 * matrix, mat3 * otherMatrix) {
 	*((SuperMaximo::mat3*)matrix) = (*((SuperMaximo::mat3*)matrix))*(*((SuperMaximo::mat3*)otherMatrix));
 }
 
-void mat3InitIdentity(mat3 * matrix, mat3 * otherMatrix) {
+void mat3InitIdentity(mat3 * matrix) {
 	((SuperMaximo::mat3*)matrix)->initIdentity();
 }
 
@@ -109,7 +109,7 @@ void mat4MultiplyMat4(mat4 * matrix, mat4 * otherMatrix) {
 	*((SuperMaximo::mat4*)matrix) = (*((SuperMaximo::mat4*)matrix))*(*((SuperMaximo::mat4*)otherMatrix));
 }
 
-void mat4InitIdentity(mat4 * matrix, mat4 * otherMatrix) {
+void mat4InitIdentity(mat4 * matrix) {
 	((SuperMaximo::mat4*)matrix)->initIdentity();
 }
 

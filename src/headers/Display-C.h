@@ -104,7 +104,7 @@ float * mat2Arr(mat2 * matrix);
 float mat2Component(mat2 * matrix, int index);
 void mat2AssignComponent(mat2 * matrix, int index, float value);
 void mat2MultiplyMat2(mat2 * matrix, mat2 * otherMatrix);
-void mat2InitIdentity(mat2 * matrix, mat2 * otherMatrix);
+void mat2InitIdentity(mat2 * matrix);
 
 mat3 * mat3New();
 void mat3Delete(mat3 * matrix);
@@ -113,7 +113,7 @@ float * mat3Arr(mat3 * matrix);
 float mat3Component(mat3 * matrix, int index);
 void mat3AssignComponent(mat3 * matrix, int index, float value);
 void mat3MultiplyMat3(mat3 * matrix, mat3 * otherMatrix);
-void mat3InitIdentity(mat3 * matrix, mat3 * otherMatrix);
+void mat3InitIdentity(mat3 * matrix);
 
 mat4 * mat4New();
 void mat4Delete(mat4 * matrix);
@@ -122,7 +122,7 @@ float * mat4Arr(mat4 * matrix);
 float mat4Component(mat4 * matrix, int index);
 void mat4AssignComponent(mat4 * matrix, int index, float value);
 void mat4MultiplyMat4(mat4 * matrix, mat4 * otherMatrix);
-void mat4InitIdentity(mat4 * matrix, mat4 * otherMatrix);
+void mat4InitIdentity(mat4 * matrix);
 
 vec2 * vec2New();
 void vec2Delete(vec2 * vec);
