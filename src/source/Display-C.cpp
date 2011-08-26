@@ -25,6 +25,10 @@ void mat2Copy(mat2 * srcMatrix, mat2 * dstMatrix) {
 	*((SuperMaximo::mat2*)dstMatrix) = *((SuperMaximo::mat2*)srcMatrix);
 }
 
+float * mat2Arr(mat2 * matrix) {
+	return ((SuperMaximo::mat2*)matrix)->component;
+}
+
 float mat2Component(mat2 * matrix, int index) {
 	return ((SuperMaximo::mat2*)matrix)->component[index];
 }
@@ -55,6 +59,10 @@ void mat3Copy(mat3 * srcMatrix, mat3 * dstMatrix) {
 	*((SuperMaximo::mat3*)dstMatrix) = *((SuperMaximo::mat3*)srcMatrix);
 }
 
+float * mat3Arr(mat3 * matrix) {
+	return ((SuperMaximo::mat3*)matrix)->component;
+}
+
 float mat3Component(mat3 * matrix, int index) {
 	return ((SuperMaximo::mat3*)matrix)->component[index];
 }
@@ -83,6 +91,10 @@ void mat4Delete(mat4 * matrix) {
 
 void mat4Copy(mat4 * srcMatrix, mat4 * dstMatrix) {
 	*((SuperMaximo::mat4*)dstMatrix) = *((SuperMaximo::mat4*)srcMatrix);
+}
+
+float * mat4Arr(mat4 * matrix) {
+	return ((SuperMaximo::mat4*)matrix)->component;
 }
 
 float mat4Component(mat4 * matrix, int index) {
