@@ -11,7 +11,7 @@
 
 extern "C" {
 
-void initSDL(Uint32 flags) {
+void initSDL(uint32_t flags) {
 	SuperMaximo::initSDL(flags);
 }
 
