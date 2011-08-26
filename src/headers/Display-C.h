@@ -173,9 +173,9 @@ int resizeScreen(unsigned width, unsigned height, int fullScreen);
 void setClearColor(float r, float g, float b, float a);
 void getClearColor(float * r, float * g, float * b, float * a);
 
-mat4 * getPerspectiveMatrix6(float left, float right, float bottom, float top, float near, float far);
+mat4 * getPerspectiveMatrix6(float left, float right, float bottom, float top, float front, float back);
 mat4 * getPerspectiveMatrix4(float angle, float aspectRatio, float front, float back);
-mat4 * getOrthographicMatrix(float left, float right, float bottom, float top, float near, float far);
+mat4 * getOrthographicMatrix(float left, float right, float bottom, float top, float front, float back);
 
 mat2 * get2dRotationMatrix(float angle);
 

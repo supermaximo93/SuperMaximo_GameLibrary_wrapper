@@ -359,9 +359,9 @@ void getClearColor(float * r, float * g, float * b, float * a) {
 	*a = clearColor.a;
 }
 
-mat4 * getPerspectiveMatrix6(float left, float right, float bottom, float top, float near, float far) {
+mat4 * getPerspectiveMatrix6(float left, float right, float bottom, float top, float front, float back) {
 	SuperMaximo::mat4 * returnMatrix = new SuperMaximo::mat4;
-	*returnMatrix = SuperMaximo::getPerspectiveMatrix(left, right, bottom, top, near, far);
+	*returnMatrix = SuperMaximo::getPerspectiveMatrix(left, right, bottom, top, front, back);
 	return (mat4*)returnMatrix;
 }
 
@@ -371,9 +371,9 @@ mat4 * getPerspectiveMatrix4(float angle, float aspectRatio, float front, float 
 	return (mat4*)returnMatrix;
 }
 
-mat4 * getOrthographicMatrix(float left, float right, float bottom, float top, float near, float far) {
+mat4 * getOrthographicMatrix(float left, float right, float bottom, float top, float front, float back) {
 	SuperMaximo::mat4 * returnMatrix = new SuperMaximo::mat4;
-	*returnMatrix = SuperMaximo::getOrthographicMatrix(left, right, bottom, top, near, far);
+	*returnMatrix = SuperMaximo::getOrthographicMatrix(left, right, bottom, top, front, back);
 	return (mat4*)returnMatrix;
 }
 
