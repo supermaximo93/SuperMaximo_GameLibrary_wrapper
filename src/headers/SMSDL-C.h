@@ -5,8 +5,8 @@
  *      Author: Max Foster
  */
 
-#ifndef SMSDL_C_H_
-#define SMSDL_C_H_
+#ifndef SMSDLC_H_
+#define SMSDLC_H_
 
 #ifdef __cplusplus
 extern "C" {
@@ -32,4 +32,4 @@ void wait(long time);
 }
 #endif
 
-#endif /* SMSDL_C_H_ */
+#endif /* SMSDLC_H_ */

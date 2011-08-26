@@ -279,6 +279,7 @@ float vec4DotProduct(vec4 * vec, vec4 * otherVec) {
 	return ((SuperMaximo::vec4*)vec)->dotProduct(*((SuperMaximo::vec4*)otherVec));
 }
 
+
 int initDisplay(unsigned width, unsigned height, unsigned depth, unsigned maxFramerate, int fullScreen,
 		const char * windowTitle) {
 	return SuperMaximo::initDisplay(width, height, depth, maxFramerate, fullScreen, windowTitle);
@@ -353,7 +354,7 @@ void bindTextureUnit(textureUnitEnum textureUnit) {
 }
 
 textureUnitEnum boundTexureUnit() {
-	return (textureUnitEnum)SuperMaximo::boundTexureUnit();
+	return (textureUnitEnum)SuperMaximo::boundTextureUnit();
 }
 
 void setMatrix(matrixEnum matrixId) {

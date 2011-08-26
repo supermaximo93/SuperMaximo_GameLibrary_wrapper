@@ -5,8 +5,8 @@
  *      Author: Max Foster
  */
 
-#ifndef DISPLAY_C_H_
-#define DISPLAY_C_H_
+#ifndef DISPLAYC_H_
+#define DISPLAYC_H_
 
 #ifdef __cplusplus
 
@@ -165,14 +165,14 @@ mat2 * get2dRotationMatrix(float angle);
 void bindShader(Shader * shader);
 Shader * boundShader();
 
-void bindTextureUnit(textureUnitEnum textureUnit);
-textureUnitEnum boundTexureUnit();
+void bindTextureUnit(enum textureUnitEnum textureUnit);
+enum textureUnitEnum boundTexureUnit();
 
-void setMatrix(matrixEnum matrixId);
-matrixEnum currentMatrix();
-void copyMatrix(matrixEnum srcMatrixId, matrixEnum dstMatrixId);
-void copyMat4ToMatrix(mat4 * srcMatrix, matrixEnum dstMatrixId);
-mat4 * getMatrix(matrixEnum matrixId);
+void setMatrix(enum matrixEnum matrixId);
+enum matrixEnum currentMatrix();
+void copyMatrix(enum matrixEnum srcMatrixId, enum matrixEnum dstMatrixId);
+void copyMat4ToMatrix(mat4 * srcMatrix, enum matrixEnum dstMatrixId);
+mat4 * getMatrix(enum matrixEnum matrixId);
 void pushMatrix();
 void popMatrix();
 
@@ -187,7 +187,8 @@ void setIdealFramerate(unsigned newIdealFramerate);
 unsigned getIdealFramerate();
 float compensation();
 
-void enableBlending(blendFuncEnum srcBlendFunc, blendFuncEnum dstBlendFunc, blendFuncEquEnum blendFuncEquation);
+void enableBlending(enum blendFuncEnum srcBlendFunc, enum blendFuncEnum dstBlendFunc,
+		enum blendFuncEquEnum blendFuncEquation);
 void disableBlending();
 int blendingEnabled();
 
@@ -207,4 +208,4 @@ int texture2dArrayDisabled();
 }
 #endif
 
-#endif /* DISPLAY_C_H_ */
+#endif /* DISPLAYC_H_ */
