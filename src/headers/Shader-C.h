@@ -8,6 +8,8 @@
 #ifndef SHADERC_H_
 #define SHADERC_H_
 
+#include "Display-C.h"
+
 #ifdef __cplusplus
 
 class Shader;

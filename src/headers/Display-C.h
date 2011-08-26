@@ -11,6 +11,9 @@
 #ifdef __cplusplus
 
 class Shader;
+class Sprite;
+class Model;
+class Object;
 
 struct mat2;
 struct mat3;
@@ -24,6 +27,9 @@ extern "C" {
 #else
 
 typedef struct Shader Shader;
+typedef struct Sprite Sprite;
+typedef struct Model Model;
+typedef struct Object Object;
 
 typedef struct mat2 mat2;
 typedef struct mat3 mat3;

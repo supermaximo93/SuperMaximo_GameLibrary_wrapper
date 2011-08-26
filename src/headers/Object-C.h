@@ -8,6 +8,8 @@
 #ifndef OBJECTC_H_
 #define OBJECTC_H_
 
+#include "Display-C.h"
+
 #ifdef __cplusplus
 
 class Object;
@@ -15,10 +17,6 @@ class Model;
 class Sprite;
 class Shader;
 extern "C" {
-
-#else
-
-typedef struct Sprite Sprite;
 
 #endif
 

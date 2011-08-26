@@ -14,7 +14,7 @@ extern "C" {
 Model * modelNew(const char * newName, const char * path, const char * fileName, unsigned framerate,
 		bufferUsageEnum bufferUsage) {
 	return (Model*)(new SuperMaximo::Model(newName, path, fileName, framerate,
-			(SuperMaximo::bufferUsageEnum)bufferUsage, 0, 0));
+			(SuperMaximo::bufferUsageEnum)bufferUsage));
 }
 
 void modelDelete(Model * model) {

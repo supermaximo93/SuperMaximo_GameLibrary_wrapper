@@ -8,6 +8,8 @@
 #ifndef MODELC_H_
 #define MODELC_H_
 
+#include "Display-C.h"
+
 #ifdef __cplusplus
 
 class Object;
@@ -18,11 +20,6 @@ struct bone;
 struct mat4;
 
 extern "C" {
-
-#else
-
-typedef struct Model Model;
-typedef struct Object Object;
 
 #endif
 
