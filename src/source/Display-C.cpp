@@ -36,6 +36,7 @@ void mat2InitIdentity(mat2 * matrix, mat2 * otherMatrix) {
 	((SuperMaximo::mat2*)matrix)->initIdentity();
 }
 
+
 mat3 * mat3New() {
 	return (mat3*)(new SuperMaximo::mat3);
 }
@@ -59,6 +60,7 @@ void mat3MultiplyMat3(mat3 * matrix, mat3 * otherMatrix) {
 void mat3InitIdentity(mat3 * matrix, mat3 * otherMatrix) {
 	((SuperMaximo::mat3*)matrix)->initIdentity();
 }
+
 
 mat4 * mat4New() {
 	return (mat4*)(new SuperMaximo::mat4);
@@ -117,6 +119,14 @@ void vec2AssignComponent(vec2 * vec, char component, float value) {
 	}
 }
 
+void vec2AddVec2(vec2 * vec, vec2 * otherVec) {
+	*((SuperMaximo::vec2*)vec) += *((SuperMaximo::vec2*)otherVec);
+}
+
+void vec2SubtractVec2(vec2 * vec , vec2 * otherVec) {
+	*((SuperMaximo::vec2*)vec) -= *((SuperMaximo::vec2*)otherVec);
+}
+
 void vec2MultiplyMat2(vec2 * vec, mat2 * matrix) {
 	*((SuperMaximo::vec2*)vec) *= (*((SuperMaximo::mat2*)matrix));
 }
@@ -145,6 +155,129 @@ int vec2PolygonCollision(vec2 * vec, unsigned vertexCount, vec2 ** vertices) {
 	return ((SuperMaximo::vec2*)vec)->polygonCollision(vertexCount, vec2Arr);
 }
 
+
+vec3 * vec3New() {
+	return (vec3*)(new SuperMaximo::vec3);
+}
+
+void vec3Copy(vec3 * srcVec, vec3 * dstVec) {
+	*((SuperMaximo::vec3*)dstVec) = *((SuperMaximo::vec3*)srcVec);
+}
+
+float vec3Component(vec3 * vec, char component) {
+	switch (component) {
+	case 'x':
+	case 'r':
+	case 's': return ((SuperMaximo::vec3*)vec)->x;
+	case 'y':
+	case 'g':
+	case 't': return ((SuperMaximo::vec3*)vec)->y;
+	case 'z':
+	case 'b':
+	case 'p': return ((SuperMaximo::vec3*)vec)->z;
+	default: return 0;
+	}
+}
+
+void vec3AssignComponent(vec3 * vec, char component, float value) {
+	switch (component) {
+	case 'x':
+	case 'r':
+	case 's': ((SuperMaximo::vec3*)vec)->x = value; break;
+	case 'y':
+	case 'g':
+	case 't': ((SuperMaximo::vec3*)vec)->y = value; break;
+	case 'z':
+	case 'b':
+	case 'p': ((SuperMaximo::vec3*)vec)->z = value; break;
+	default: break;
+	}
+}
+
+void vec3AddVec3(vec3 * vec, vec3 * otherVec) {
+	*((SuperMaximo::vec3*)vec) += *((SuperMaximo::vec3*)otherVec);
+}
+
+void vec3SubtractVec3(vec3 * vec , vec3 * otherVec) {
+	*((SuperMaximo::vec3*)vec) -= *((SuperMaximo::vec3*)otherVec);
+}
+
+void vec3MultiplyFloat(vec3 * vec, float value) {
+	*((SuperMaximo::vec3*)vec) *= value;
+}
+
+void vec3DivideFloat(vec3 * vec, float value) {
+	*((SuperMaximo::vec3*)vec) /= value;
+}
+
+float vec3DotProduct(vec3 * vec, vec3 * otherVec) {
+	return ((SuperMaximo::vec3*)vec)->dotProduct(*((SuperMaximo::vec3*)otherVec));
+}
+
+
+vec4 * vec4New() {
+	return (vec4*)(new SuperMaximo::vec4);
+}
+
+void vec4Copy(vec4 * srcVec, vec4 * dstVec) {
+	*((SuperMaximo::vec4*)dstVec) = *((SuperMaximo::vec4*)srcVec);
+}
+
+float vec4Component(vec4 * vec, char component) {
+	switch (component) {
+	case 'x':
+	case 'r':
+	case 's': return ((SuperMaximo::vec4*)vec)->x;
+	case 'y':
+	case 'g':
+	case 't': return ((SuperMaximo::vec4*)vec)->y;
+	case 'z':
+	case 'b':
+	case 'p': return ((SuperMaximo::vec4*)vec)->z;
+	case 'w':
+	case 'a':
+	case 'q': return ((SuperMaximo::vec4*)vec)->w;
+	default: return 0;
+	}
+}
+
+void vec4AssignComponent(vec4 * vec, char component, float value) {
+	switch (component) {
+	case 'x':
+	case 'r':
+	case 's': ((SuperMaximo::vec4*)vec)->x = value; break;
+	case 'y':
+	case 'g':
+	case 't': ((SuperMaximo::vec4*)vec)->y = value; break;
+	case 'z':
+	case 'b':
+	case 'p': ((SuperMaximo::vec4*)vec)->z = value; break;
+	case 'w':
+	case 'a':
+	case 'q': ((SuperMaximo::vec4*)vec)->w = value; break;
+	default: break;
+	}
+}
+
+void vec4AddVec4(vec4 * vec, vec4 * otherVec) {
+	*((SuperMaximo::vec4*)vec) += *((SuperMaximo::vec4*)otherVec);
+}
+
+void vec4SubtractVec4(vec4 * vec , vec4 * otherVec) {
+	*((SuperMaximo::vec4*)vec) -= *((SuperMaximo::vec4*)otherVec);
+}
+
+void vec4MultiplyFloat(vec4 * vec, float value) {
+	*((SuperMaximo::vec4*)vec) *= value;
+}
+
+void vec4DivideFloat(vec4 * vec, float value) {
+	*((SuperMaximo::vec4*)vec) /= value;
+}
+
+float vec4DotProduct(vec4 * vec, vec4 * otherVec) {
+	return ((SuperMaximo::vec4*)vec)->dotProduct(*((SuperMaximo::vec4*)otherVec));
+}
 
 int initDisplay(unsigned width, unsigned height, unsigned depth, unsigned maxFramerate, int fullScreen,
 		const char * windowTitle) {

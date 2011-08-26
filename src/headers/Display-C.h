@@ -114,12 +114,34 @@ vec2 * vec2New();
 void vec2Copy(vec2 * srcVec, vec2 * dstVec);
 float vec2Component(vec2 * vec, char component);
 void vec2AssignComponent(vec2 * vec, char component, float value);
+void vec2AddVec2(vec2 * vec, vec2 * otherVec);
+void vec2SubtractVec2(vec2 * vec , vec2 * otherVec);
 void vec2MultiplyMat2(vec2 * vec, mat2 * matrix);
 void vec2MultiplyFloat(vec2 * vec, float value);
 void vec2DivideFloat(vec2 * vec, float value);
 vec2 * vec2Perpendicular(vec2 * vec);
 float vec2DotProduct(vec2 * vec, vec2 * otherVec);
 int vec2PolygonCollision(vec2 * vec, unsigned vertexCount, vec2 ** vertices);
+
+vec3 * vec3New();
+void vec3Copy(vec3 * srcVec, vec3 * dstVec);
+float vec3Component(vec3 * vec, char component);
+void vec3AssignComponent(vec3 * vec, char component, float value);
+void vec3AddVec3(vec3 * vec, vec3 * otherVec);
+void vec3SubtractVec3(vec3 * vec , vec3 * otherVec);
+void vec3MultiplyFloat(vec3 * vec, float value);
+void vec3DivideFloat(vec3 * vec, float value);
+float vec3DotProduct(vec3 * vec, vec3 * otherVec);
+
+vec4 * vec4New();
+void vec4Copy(vec4 * srcVec, vec4 * dstVec);
+float vec4Component(vec4 * vec, char component);
+void vec4AssignComponent(vec4 * vec, char component, float value);
+void vec4AddVec4(vec4 * vec, vec4 * otherVec);
+void vec4SubtractVec4(vec4 * vec , vec4 * otherVec);
+void vec4MultiplyFloat(vec4 * vec, float value);
+void vec4DivideFloat(vec4 * vec, float value);
+float vec4DotProduct(vec4 * vec, vec4 * otherVec);
 
 
 int initDisplay(unsigned width, unsigned height, unsigned depth, unsigned maxFramerate, int fullScreen,
