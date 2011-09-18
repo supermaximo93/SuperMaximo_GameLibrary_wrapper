@@ -23,6 +23,9 @@ extern "C" {
 #define SDL_INIT_EVENTTHREAD 0x01000000
 #define SDL_INIT_EVERYTHING 0x0000FFFF
 
+#define SM_FALSE 0
+#define SM_TRUE 1
+
 void initSDL(uint32_t flags);
 void quitSDL();
 
