@@ -6,7 +6,9 @@
  */
 
 #include <iostream>
-#include "../SuperMaximo_GameLibrary/headers/classes/NetworkService.h"
+using namespace std;
+
+#include <SuperMaximo_GameLibrary/classes/NetworkService.h>
 
 #include "../headers/NetworkService-C.h"
 
@@ -131,7 +133,7 @@ const char * networkServiceRecvStrUdpStr(NetworkService * networkService, int * 
 }
 
 int networkServiceRecvStrUdpId(NetworkService * networkService, const char ** stringBuffer, int isServer) {
-	return ((SuperMaximo::NetworkService*)networkService)->recvStrUdp((std::string*)stringBuffer, isServer);
+	return ((SuperMaximo::NetworkService*)networkService)->recvStrUdp((string*)stringBuffer, isServer);
 }
 
 int networkServiceSendIntUdp(NetworkService * networkService, int data, int id, int isServer) {

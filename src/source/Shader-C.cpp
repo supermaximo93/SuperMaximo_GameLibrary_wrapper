@@ -5,7 +5,7 @@
  *      Author: Max Foster
  */
 
-#include "../SuperMaximo_GameLibrary/headers/classes/Shader.h"
+#include <SuperMaximo_GameLibrary/classes/Shader.h>
 
 #include "../headers/Shader-C.h"
 
@@ -35,7 +35,7 @@ void shaderUse(Shader * shader) {
 }
 
 unsigned shaderProgram(Shader * shader) {
-	return ((SuperMaximo::Shader*)shader)->program();
+	return *((SuperMaximo::Shader*)shader);
 }
 
 unsigned shaderSetUniformLocation(Shader * shader, shaderLocationEnum dstLocation, const char * locationName) {

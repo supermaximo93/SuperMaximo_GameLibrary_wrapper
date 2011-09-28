@@ -5,7 +5,7 @@
  *      Author: Max Foster
  */
 
-#include "../SuperMaximo_GameLibrary/headers/SMSDL.h"
+#include <SuperMaximo_GameLibrary/SMSDL.h>
 
 #include "../headers/SMSDL-C.h"
 

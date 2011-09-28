@@ -5,8 +5,8 @@
  *      Author: Max Foster
  */
 
-#include "../SuperMaximo_GameLibrary/headers/classes/Sprite.h"
-#include "../SuperMaximo_GameLibrary/headers/classes/Shader.h"
+#include <SuperMaximo_GameLibrary/classes/Sprite.h>
+#include <SuperMaximo_GameLibrary/classes/Shader.h>
 
 #include "../headers/Sprite-C.h"
 

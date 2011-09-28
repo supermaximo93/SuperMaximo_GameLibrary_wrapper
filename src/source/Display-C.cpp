@@ -4,9 +4,11 @@
  *  Created on: 25 Aug 2011
  *      Author: Max Foster
  */
+
 #include <iostream>
 using namespace std;
-#include "../SuperMaximo_GameLibrary/headers/Display.h"
+
+#include <SuperMaximo_GameLibrary/Display.h>
 
 #include "../headers/Display-C.h"
 

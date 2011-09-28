@@ -5,7 +5,7 @@
  *      Author: Max Foster
  */
 
-#include "../SuperMaximo_GameLibrary/headers/classes/Sound.h"
+#include <SuperMaximo_GameLibrary/classes/Sound.h>
 
 #include "../headers/Sound-C.h"
 

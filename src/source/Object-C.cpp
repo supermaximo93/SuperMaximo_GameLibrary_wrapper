@@ -5,7 +5,7 @@
  *      Author: Max Foster
  */
 
-#include "../SuperMaximo_GameLibrary/headers/classes/Object.h"
+#include <SuperMaximo_GameLibrary/classes/Object.h>
 
 #include "../headers/Display-C.h"
 #include "../headers/Object-C.h"

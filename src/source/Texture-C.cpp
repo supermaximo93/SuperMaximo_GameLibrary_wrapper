@@ -6,7 +6,9 @@
  */
 
 #include <iostream>
-#include "../SuperMaximo_GameLibrary/headers/classes/Texture.h"
+using namespace std;
+
+#include <SuperMaximo_GameLibrary/classes/Texture.h>
 
 #include "../headers/Texture-C.h"
 
@@ -23,8 +25,7 @@ void textureDelete(Texture * texture) {
 }
 
 void textureReload(Texture * texture, textureTypeEnum textureType, unsigned numLayers, const char ** fileNames) {
-	((SuperMaximo::Texture*)texture)->reload((SuperMaximo::textureTypeEnum)textureType, numLayers,
-			(std::string*)fileNames);
+	((SuperMaximo::Texture*)texture)->reload((SuperMaximo::textureTypeEnum)textureType, numLayers, (string*)fileNames);
 }
 
 const char * textureName(Texture * texture) {

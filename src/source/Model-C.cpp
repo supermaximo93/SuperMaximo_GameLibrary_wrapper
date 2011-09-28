@@ -5,7 +5,7 @@
  *      Author: Max Foster
  */
 
-#include "../SuperMaximo_GameLibrary/headers/classes/Model.h"
+#include <SuperMaximo_GameLibrary/classes/Model.h>
 
 #include "../headers/Model-C.h"
 

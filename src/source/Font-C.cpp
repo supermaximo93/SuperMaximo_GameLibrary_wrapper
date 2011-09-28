@@ -5,7 +5,7 @@
  *      Author: Max Foster
  */
 
-#include "../SuperMaximo_GameLibrary/headers/classes/Font.h"
+#include <SuperMaximo_GameLibrary/classes/Font.h>
 
 #include "../headers/Font-C.h"
 

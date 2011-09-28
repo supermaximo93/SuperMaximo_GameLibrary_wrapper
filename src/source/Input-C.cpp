@@ -5,7 +5,7 @@
  *      Author: Max Foster
  */
 
-#include "../SuperMaximo_GameLibrary/headers/Input.h"
+#include <SuperMaximo_GameLibrary/Input.h>
 
 #include "../headers/Input-C.h"
 
