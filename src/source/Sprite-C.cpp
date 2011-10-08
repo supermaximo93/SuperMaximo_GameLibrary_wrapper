@@ -56,6 +56,14 @@ int spriteHeight(Sprite * sprite) {
 	return ((SuperMaximo::Sprite*)sprite)->height();
 }
 
+int spriteOriginX(Sprite * sprite) {
+	return ((SuperMaximo::Sprite*)sprite)->originX();
+}
+
+int spriteOriginY(Sprite * sprite) {
+	return ((SuperMaximo::Sprite*)sprite)->originY();
+}
+
 unsigned spriteTexture(Sprite * sprite, unsigned frame) {
 	return ((SuperMaximo::Sprite*)sprite)->texture(frame);
 }

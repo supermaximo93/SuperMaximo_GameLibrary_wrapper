@@ -31,6 +31,8 @@ void spriteDrawObject(Sprite * sprite, Object * object);
 
 int spriteWidth(Sprite * sprite);
 int spriteHeight(Sprite * sprite);
+int spriteOriginX(Sprite * sprite);
+int spriteOriginY(Sprite * sprite);
 
 unsigned spriteTexture(Sprite * sprite, unsigned frame);
 
