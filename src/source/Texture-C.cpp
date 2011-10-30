@@ -36,6 +36,14 @@ textureTypeEnum textureType(Texture * texture) {
 	return (textureTypeEnum)((SuperMaximo::Texture*)texture)->type();
 }
 
+int textureWidth(Texture * texture) {
+	return (textureTypeEnum)((SuperMaximo::Texture*)texture)->width();
+}
+
+int textureHeight(Texture * texture) {
+	return (textureTypeEnum)((SuperMaximo::Texture*)texture)->height();
+}
+
 unsigned textureData(Texture * texture) {
 	return (unsigned)(*((SuperMaximo::Texture*)texture));
 }

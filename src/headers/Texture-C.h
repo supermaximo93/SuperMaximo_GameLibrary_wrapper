@@ -29,6 +29,8 @@ void textureReload(Texture * texture, enum textureTypeEnum textureType, unsigned
 
 const char * textureName(Texture * texture);
 enum textureTypeEnum textureType(Texture * texture);
+int textureWidth(Texture * texture);
+int textureHeight(Texture * texture);
 unsigned textureData(Texture * texture);
 
 #ifdef __cplusplus
