@@ -184,7 +184,9 @@ float vec2DotProduct(vec2 * vec, vec2 * otherVec) {
 }
 
 int vec2PolygonCollision(vec2 * vec, unsigned vertexCount, vec2 ** vertices) {
-	SuperMaximo::vec2 vec2Arr[vertexCount];
+	const unsigned maxVertexCount = 100;
+	if (vertexCount > maxVertexCount) vertexCount = maxVertexCount;
+	SuperMaximo::vec2 vec2Arr[maxVertexCount];
 	for (unsigned i = 0; i < vertexCount; i++) vec2Arr[i] = *((SuperMaximo::vec2*)vertices[i]);
 	return ((SuperMaximo::vec2*)vec)->polygonCollision(vertexCount, vec2Arr);
 }
