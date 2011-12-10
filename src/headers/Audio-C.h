@@ -15,16 +15,6 @@ extern "C" {
 void initAudio(unsigned channels);
 void quitAudio();
 
-void soundPosition(int channel, int angle, int distance);
-
-void musicVolume(int percentage);
-
-void pauseMusic();
-void resumeMusic();
-void restartMusic();
-void stopMusic();
-void fadeMusic(int time);
-
 #ifdef __cplusplus
 }
 #endif

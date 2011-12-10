@@ -7,7 +7,7 @@
 
 #include <SuperMaximo_GameLibrary/classes/Music.h>
 
-#include "../headers/Music-C.h"
+#include <SuperMaximo_GameLibrary-C/Music-C.h>
 
 extern "C" {
 
@@ -26,6 +26,34 @@ const char * musicName(Music * music) {
 
 void musicPlay(Music * music) {
 	((SuperMaximo::Music*)music)->play();
+}
+
+int musicVolume() {
+	return SuperMaximo::Music::volume();
+}
+
+int musicSetVolume(int percentage, bool relative) {
+	return SuperMaximo::Music::setVolume(percentage, relative);
+}
+
+void musicPause() {
+	SuperMaximo::Music::pause();
+}
+
+void musicResume() {
+	SuperMaximo::Music::resume();
+}
+
+void musicRestart() {
+	SuperMaximo::Music::restart();
+}
+
+void musicStop() {
+	SuperMaximo::Music::stop();
+}
+
+void musicFadeOut(unsigned time) {
+	SuperMaximo::Music::fadeOut(time);
 }
 
 }

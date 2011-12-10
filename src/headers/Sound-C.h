@@ -21,14 +21,18 @@ typedef struct Sound Sound;
 
 Sound * soundNew(const char * newName, const char * fileName);
 void soundDelete(Sound * sound);
+
 const char * soundName(Sound * sound);
-void soundSetVolume(Sound * sound, int percentage, int relative);
+
 int soundVolume(Sound * sound);
+int soundSetVolume(Sound * sound, int percentage, int relative);
+
 int soundPlay(Sound * sound, int newVolume, int channel);
 void soundStop(Sound * sound);
-void soundSetSoundPosition(Sound * sound, int angle, int distance);
+void soundSetPosition(Sound * sound, int angle, int distance);
 
-void allocateSoundChannels(unsigned channels);
+void soundAllocateChannels(unsigned channels);
+void soundFindByChannel(unsigned channel);
 
 #ifdef __cplusplus
 }

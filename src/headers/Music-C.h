@@ -21,8 +21,18 @@ typedef struct Music Music;
 
 Music * musicNew(const char * newName, const char * fileName);
 void musicDelete(Music * music);
+
 const char * musicName(Music * music);
 void musicPlay(Music * music);
+
+int musicVolume();
+int musicSetVolume(int percentage, bool relative);
+
+void musicPause();
+void musicResume();
+void musicRestart();
+void musicStop();
+void musicFadeOut(unsigned time);
 
 #ifdef __cplusplus
 }

@@ -7,7 +7,7 @@
 
 #include <SuperMaximo_GameLibrary/Audio.h>
 
-#include "../headers/Audio-C.h"
+#include <SuperMaximo_GameLibrary-C/Audio-C.h>
 
 extern "C" {
 
@@ -17,34 +17,6 @@ void initAudio(unsigned channels) {
 
 void quitAudio() {
 	SuperMaximo::quitAudio();
-}
-
-void soundPosition(int channel, int angle, int distance) {
-	SuperMaximo::soundPosition(channel, angle, distance);
-}
-
-void musicVolume(int percentage) {
-	SuperMaximo::musicVolume(percentage);
-}
-
-void pauseMusic() {
-	SuperMaximo::pauseMusic();
-}
-
-void resumeMusic() {
-	SuperMaximo::resumeMusic();
-}
-
-void restartMusic() {
-	SuperMaximo::restartMusic();
-}
-
-void stopMusic() {
-	SuperMaximo::stopMusic();
-}
-
-void fadeMusic(int time) {
-	SuperMaximo::fadeMusic(time);
 }
 
 }

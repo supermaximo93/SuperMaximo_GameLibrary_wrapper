@@ -7,7 +7,7 @@
 
 #include <SuperMaximo_GameLibrary/classes/Sound.h>
 
-#include "../headers/Sound-C.h"
+#include <SuperMaximo_GameLibrary-C/Sound-C.h>
 
 extern "C" {
 
@@ -23,8 +23,8 @@ const char * soundName(Sound * sound) {
 	return ((SuperMaximo::Sound*)sound)->name().c_str();
 }
 
-void soundSetVolume(Sound * sound, int percentage, int relative) {
-	((SuperMaximo::Sound*)sound)->setVolume(percentage, relative);
+int soundSetVolume(Sound * sound, int percentage, int relative) {
+	return ((SuperMaximo::Sound*)sound)->setVolume(percentage, relative);
 }
 
 int soundVolume(Sound * sound) {
@@ -39,12 +39,16 @@ void soundStop(Sound * sound) {
 	((SuperMaximo::Sound*)sound)->stop();
 }
 
-void soundSetSoundPosition(Sound * sound, int angle, int distance) {
-	((SuperMaximo::Sound*)sound)->setSoundPosition(angle, distance);
+void soundSetPosition(Sound * sound, int angle, int distance) {
+	((SuperMaximo::Sound*)sound)->setPosition(angle, distance);
 }
 
-void allocateSoundChannels(unsigned channels) {
-	SuperMaximo::allocateSoundChannels(channels);
+void soundAllocateChannels(unsigned channels) {
+	SuperMaximo::Sound::allocateChannels(channels);
+}
+
+void soundFindByChannel(unsigned channel) {
+	SuperMaximo::Sound::findByChannel(channel);
 }
 
 }
