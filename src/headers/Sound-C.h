@@ -32,7 +32,7 @@ void soundStop(Sound * sound);
 void soundSetPosition(Sound * sound, int angle, int distance);
 
 void soundAllocateChannels(unsigned channels);
-void soundFindByChannel(unsigned channel);
+Sound * soundFindByChannel(unsigned channel);
 
 #ifdef __cplusplus
 }

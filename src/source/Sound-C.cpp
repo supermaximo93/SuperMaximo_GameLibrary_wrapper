@@ -47,8 +47,8 @@ void soundAllocateChannels(unsigned channels) {
 	SuperMaximo::Sound::allocateChannels(channels);
 }
 
-void soundFindByChannel(unsigned channel) {
-	SuperMaximo::Sound::findByChannel(channel);
+Sound * soundFindByChannel(unsigned channel) {
+	return (Sound*)SuperMaximo::Sound::findByChannel(channel);
 }
 
 }
