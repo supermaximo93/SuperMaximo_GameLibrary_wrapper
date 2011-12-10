@@ -32,7 +32,7 @@ int musicVolume() {
 	return SuperMaximo::Music::volume();
 }
 
-int musicSetVolume(int percentage, bool relative) {
+int musicSetVolume(int percentage, int relative) {
 	return SuperMaximo::Music::setVolume(percentage, relative);
 }
 

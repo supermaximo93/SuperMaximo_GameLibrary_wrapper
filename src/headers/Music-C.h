@@ -26,7 +26,7 @@ const char * musicName(Music * music);
 void musicPlay(Music * music);
 
 int musicVolume();
-int musicSetVolume(int percentage, bool relative);
+int musicSetVolume(int percentage, int relative);
 
 void musicPause();
 void musicResume();
