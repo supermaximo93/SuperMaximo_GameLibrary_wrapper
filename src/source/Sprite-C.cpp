@@ -45,7 +45,7 @@ void spriteDraw(Sprite * sprite, int x, int y, float depth, float rotation, floa
 }
 
 void spriteDrawObject(Sprite * sprite, Object * object) {
-	((SuperMaximo::Sprite*)sprite)->draw((SuperMaximo::Object*)object);
+	((SuperMaximo::Sprite*)sprite)->draw(*((SuperMaximo::Object*)object));
 }
 
 int spriteWidth(Sprite * sprite) {

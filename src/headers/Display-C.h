@@ -220,11 +220,13 @@ float glSlVersion();
 
 int vertexArrayObjectSupported();
 
+void enableTexture2dArray();
 void disableTexture2dArray();
 int texture2dArrayDisabled();
 
+void enableTextureRectangle();
 void disableTextureRectangle();
-int textureRectangleDisabled();
+int textureRectangleEnabled();
 
 #ifdef __cplusplus
 }

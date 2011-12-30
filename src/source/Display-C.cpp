@@ -494,16 +494,20 @@ int depthTestingEnabled() {
 	return SuperMaximo::depthTestingEnabled();
 }
 
-float openGlVersion() {
-	return SuperMaximo::openGlVersion();
+float openglVersion() {
+	return SuperMaximo::openglVersion();
 }
 
-float glSlVersion() {
-	return SuperMaximo::glSlVersion();
+float glslVersion() {
+	return SuperMaximo::glslVersion();
 }
 
 int vertexArrayObjectSupported() {
 	return SuperMaximo::vertexArrayObjectSupported();
+}
+
+void enableTexture2dArray() {
+	SuperMaximo::enableTexture2dArray();
 }
 
 void disableTexture2dArray() {
@@ -514,12 +518,16 @@ int texture2dArrayDisabled() {
 	return SuperMaximo::texture2dArrayDisabled();
 }
 
+void enableTextureRectangle() {
+	SuperMaximo::enableTextureRectangle();
+}
+
 void disableTextureRectangle() {
 	SuperMaximo::disableTextureRectangle();
 }
 
-int textureRectangleDisabled() {
-	return SuperMaximo::textureRectangleDisabled();
+int textureRectangleEnabled() {
+	return SuperMaximo::textureRectangleEnabled();
 }
 
 }

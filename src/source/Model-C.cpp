@@ -27,7 +27,7 @@ const char * modelName(Model * model) {
 }
 
 void modelDrawObject(Model * model, Object * object, int skipAnimation) {
-	((SuperMaximo::Model*)model)->draw((SuperMaximo::Object*)object, skipAnimation);
+	((SuperMaximo::Model*)model)->draw(*((SuperMaximo::Object*)object), skipAnimation);
 }
 
 void modelDraw(Model * model, float x, float y, float z, float xRotation, float yRotation, float zRotation,
